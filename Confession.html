@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Confession of an Alter - Share your deepest and darkest stories anonymously.">
+  <title>Confession of an Alter</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #000;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.85);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      z-index: 1000;
+      border-bottom: 1px solid #FF6F00;
+    }
+
+    header .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #FF6F00;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav ul li a {
+      color: #fff;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #FF6F00;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 1rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: #FF6F00;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 10px #FF6F00;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      padding: 0.75rem 2rem;
+      border-radius: 50px;
+      background-color: #FF6F00;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #FF6F00;
+    }
+
+    .btn:hover {
+      box-shadow: 0 0 20px #FF6F00;
+      transform: scale(1.05);
+    }
+
+    /* Sections */
+    section {
+      padding: 5rem 2rem;
+    }
+
+    section:nth-child(even) {
+      background-color: #111;
+    }
+
+    section:nth-child(odd) {
+      background-color: #1a1a1a;
+    }
+
+    h2 {
+      color: #FF6F00;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    /* About Section */
+    .about p {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    /* Confessions Section */
+    .confessions {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .confession-card {
+      background-color: #222;
+      padding: 1.5rem;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .confession-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #FF6F00;
+    }
+
+    /* Share Section */
+    .share form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .share input, 
+    .share textarea {
+      padding: 0.75rem;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+    }
+
+    .share textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #111;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    footer a {
+      margin: 0 0.5rem;
+      color: #FF6F00;
+      transition: 0.3s;
+    }
+
+    footer a:hover {
+      text-shadow: 0 0 5px #FF6F00;
+    }
+
+    /* Responsive */
+    @media(max-width:768px){
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">🕵️‍♂️ Confession of an Alter</div>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#confessions">Confessions</a></li>
+        <li><a href="#share">Share Your Story</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Let us hear your deepest and darkest secret.</h1>
+    <p>An anonymous platform for sharing your most hidden stories. Read, connect, and let your voice be heard.</p>
+    <a href="#share" class="btn">Share</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About</h2>
+    <p>Confession of an Alter is a safe space for readers to share their anonymous stories. Stories are curated and published by the writer for others to read and comment on, creating a mysterious yet supportive community.</p>
+  </section>
+
+  <!-- Confessions Section -->
+  <section id="confessions">
+    <h2>Confessions</h2>
+    <div class="confessions">
+      <div class="confession-card">
+        <p>"I once hid a secret from my family that changed everything. Sharing it here feels freeing."</p>
+      </div>
+      <div class="confession-card">
+        <p>"The darkest moments of my life are finally getting a voice. Thank you for listening."</p>
+      </div>
+      <div class="confession-card">
+        <p>"Anonymous stories allow me to express without fear. I feel seen."</p>
+      </div>
+      <!-- More cards can be added dynamically -->
+    </div>
+  </section>
+
+  <!-- Share Your Story Section -->
+  <section id="share" class="share">
+    <h2>Share Your Story</h2>
+    <form id="storyForm">
+      <input type="text" name="name" placeholder="Your Name (Optional)">
+      <input type="email" name="email" placeholder="Your Email">
+      <textarea name="message" placeholder="Your Story"></textarea>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Contact us: <a href="mailto:confession@alter.com">confession@alter.com</a></p>
+    <p>
+      <a href="#">Facebook</a> | 
+      <a href="#">Twitter</a> | 
+      <a href="#">Instagram</a>
+    </p>
+    <p>&copy; 2025 Confession of an Alter. All rights reserved.</p>
+  </footer>
+
+  <!-- JS for Form Submission -->
+  <script>
+    const form = document.getElementById('storyForm');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Thank you for sharing your story! It will be reviewed by the writer.');
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>
